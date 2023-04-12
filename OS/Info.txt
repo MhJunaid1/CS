@@ -1,0 +1,4 @@
+Linux is a kernel, which is just one part of an operating system. Ubuntu, Kali, Manjaro, Mint, and many other distributions are complete operating systems that are built on top of the Linux kernel.
+Windows is a family of operating systems developed by Microsoft Corporation. Each version of Windows, such as Windows 9, 10, and 11, is a distinct operating system, with its own set of features, user interface, and software applications.
+
+The kernel used by Windows operating systems is called the Windows NT kernel. This kernel was developed by Microsoft and is responsible for managing system resources, such as memory, processor time, and input/output devices.
