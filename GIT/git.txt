@@ -91,3 +91,7 @@ repository's master branch, you can run the following command
 to fetch and merge changes:
 git pull
 git pull is used to get code from github.com , clone it to local repo
+
+A fork on GitHub is a copy of a repository (i.e., a project's codebase, along with its associated files, documentation, and version history) that is created by another user, with the original repository remaining unchanged. Forks are a powerful feature of GitHub that allow users to contribute to open-source projects or create their own versions of existing projects.
+
+When a user forks a repository, they create a separate copy of the original repository in their own GitHub account, which they can then modify, add to, and contribute to as they see fit. This allows developers to work on their own version of a project without disrupting the main codebase, and also allows users to make changes and improvements to open-source projects, which can then be reviewed and potentially merged back into the original repository.
