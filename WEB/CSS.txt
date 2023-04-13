@@ -1,1 +1,7 @@
-First we can center elements using margin-auto, width and display
+Threee ways to Center a elements:
+First we can center elements using margin-left-right-auto, width and display:flex.
+
+Second way is text-align: center; which centers all elements in the targeted element.
+
+Third efficient way of Centering a elements in CSS
+In summary, justify-content controls the alignment and distribution of flex items along the main(usually x-axis) axis of the container, while align-items controls the alignment of flex items along the cross(usually x-axis) axis of the container. But, it depends upon the flex-direction. The cross axis is perpendicular to the main axis and is determined by the flex-direction property. 
