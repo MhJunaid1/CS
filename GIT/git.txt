@@ -1,0 +1,93 @@
+Git bash is used same as Linux/Unix terminal
+commands like touch, mkdir, rm, rmdir, cat etc
+
+git config --global user.name "your_username"
+git config --global user.email "your_email"
+TO set username and password on git
+
+git config --global --list
+TO check if changed has been committed
+
+git init 
+To initialize a empty git repo
+
+ls -lart
+To show all the files from a git repo(creted by git init)
+
+git status
+To see status of files
+git status -s
+To see the short status
+
+
+
+
+
+
+git add filename.extension
+To start tracking untracked files modification
+
+commit I(write commit description) -> esc -> :wq
+git add -A: to add all untracked files to the staging area
+git commit -m "message for commit"
+if you have made changes to multiple files
+and want to commit all the changes without
+explicitly adding them to the staging area,
+you can use the following command:
+git commit -a -m "commit all the changes"
+git checkout filename.extension: used to get the version of file of last commit
+git checkout -f: used to checkout all the files of prev commit
+git log: to view the all the commits made in the git repo
+git log -p -(number of commits you want to see): press q to quit
+git diff: to compare working tree with staging area
+git diff --staged (compare staging area with last commit)
+git rm --cached filename.extension: (to send file from committed area to untracked)
+.gitignore filename: to be ignored present at any location of git local repo
+.gitignore /filename: file would only ignored of present directory of gitignore dir
+.gitignore *.extension: to ignore all files of that extension
+.gitignore foldername/: to ignore a folder
+git branch: to see all the branches in the repo
+git branch branchName: to create a new branch
+git branch -m (chaged name from current to new one) // can be -m or -M
+git checkout (name of the branch you want to work):
+git merge (name of the branch you want to merge to main)
+
+
+To push code from local machine using git
+we need to add ssh key in github account
+To add an SSH key to your GitHub account, steps:
+
+Generate an SSH key pair on your local machine 
+using the following command in your terminal or Git Bash window:
+ssh-keygen -t ed25519 -C "your_email@example.com"
+Press enter on requiring to enter passphrase
+Press enter and choose default location to save key
+cat ~/.ssh/id_ed25519.pub
+TO locate the content of the public key
+Now enter this public key in your github new ssh key field
+and start pushing code on github
+
+Don't create .gitignore file as it don't allow the options(not 100% true)
+just a observation
+Prefer ssh over http for pushing code on github
+git remote add origin git@github.com:jdKheppar/KaliGitHub.git
+
+git push -u origin master/main
+We use git push -u origin master command to push
+the changes from the local repository's master branch
+to the master branch of a remote repository named origin.
+
+The -u flag is short for --set-upstream, which tells Git
+to set the upstream branch to the remote repository's master branch.
+This means that in the future, when you run git push without
+specifying a branch, Git will know which branch to push to on the
+remote repository.
+
+Setting an upstream branch also allows you to use the git
+pull command to fetch changes from the remote repository and
+merge them into your local branch. For example, if
+you have set the upstream branch for master to the remote
+repository's master branch, you can run the following command
+to fetch and merge changes:
+git pull
+git pull is used to get code from github.com , clone it to local repo
