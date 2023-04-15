@@ -1,0 +1,70 @@
+John the Ripper (JtR) is a popular password-cracking tool. John supports many encryption technologies for Windows and Unix systems (Mac included).
+
+One remarkable feature of John is that it can autodetect the encryption for common formats. This will save you a lot of time in researching the hash formats and finding the correct tool to crack them.
+
+John is also a dictionary-based tool. This means that it works with a dictionary of common passwords to compare it with the hash in hand. Here is a common password list called rockyou.txt.
+
+While you can use popular wordlists like RockYou, John also has its own set of wordlists with thousands of common passwords. This makes John very effective when cracking systems with weak passwords.
+
+This is how John works by default:
+
+recognize the hash type of the current hash
+generate hashes on the fly for all the passwords in the dictionary
+stop when a generated hash matches the current hash.
+This is not the only way John finds a password. You can also customize John based on your requirements. For example, you can specify the password format using the — — format flag.
+
+In this article, we will first install John followed by a walkthrough of the different modes you can use. We will then use John to crack passwords for three different use cases — a Windows password, a Linux password, and a zip file password.
+How to Use John the Ripper
+Now that we know what John is, let's look at the three modes it offers you. You will be using one of these three for most of your use cases.
+
+Single crack mode
+Wordlist mode
+Incremental mode
+Let’s look at each one of them in detail.
+What is Single Crack Mode?
+In single-crack mode, John takes a string and generates variations of that string in order to generate a set of passwords.
+
+For example, if our username is “stealth” and the password is “StEaLtH”, we can use the single mode of John to generate password variations (STEALTH, Stealth, STealth, and so on).
+
+We use the “format” flag to specify the hash type and the “single” flag to let John know we want to use the single crack mode. We will also create a crack.txt file which will contain the username and the hash value of the password.
+
+stealth:d776dd32d662b8efbdf853837269bd725203c579
+Now we can use the following command to use John’s single crack mode:
+
+$ john --single --format=raw-sha1 crack.txt
+And here is the result. You can see that John has successfully found the correct password “StEaLtH”.
+What is Dictionary Mode?
+In dictionary mode, we will provide John with a list of passwords. John will generate hashes for these on the fly and compare them with our password hash.
+
+For this example, we will use the RockYou wordlist. If you are using Kali, you can find it at /usr/share/wordlists/rockyou.txt. We will also have a crack.txt file with just the password hash.
+
+edba955d0ea15fdef4f61726ef97e5af507430c0
+Here is the command to run John in dictionary mode using the wordlist.
+
+$ john --wordlist=/usr/share/wordlists/rockyou.txt --format=raw-sha1 crack.txt
+And John finds the password pretty quickly.
+What is Incremental Mode?
+Incremental mode is the most powerful mode provided by John. It tries all possible character combinations as passwords.
+
+This sounds great, but there is a problem. The cracking can go on for a long time if the password is too long or if it's a combination of alphanumeric characters and symbols.
+
+You will rarely use this mode unless you have no other option. In typical cases, a combination of Social Engineering attacks and wordlist mode will help you crack most of the hashes.
+
+If you would like to try the incremental mode, here is the syntax.
+
+$ john -i:digits passwordfile.txt
+Here, the -i flag tells John that we want to use the increment mode. The “digits” placeholder can be used to set the maximum number of digits in the password.
+
+You can also add the “format” option to make it easier for John to start cracking.
+
+How to Crack a Zip File Password
+Finally, let's crack a zip file password. To do that, we first have to get the hash of the zip file’s password.
+
+Like unshadow, John has another utility called zip2john. zip2john helps us to get the hash from zip files. If you are cracking a .rar file, you can use the rar2john utility.
+
+Here is the syntax to get the password hash of a zip file:
+
+$ zip2john file.zip > zip.hashes
+The above command will get the hash from the zip file and store it in the zip.hashes file. You can then use John to crack the hash.
+
+$john zip.hashes
