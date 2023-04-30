@@ -1,0 +1,2 @@
+1) Typing in Browser URL Search
+When typing in Browser, the autocomplete feature auto completes the whole query, you can press ctrl+enter to search only your typed query
