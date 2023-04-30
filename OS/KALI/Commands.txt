@@ -1,0 +1,69 @@
+-2-> [name of commands you want to use] press tab to see the list of files in the current directory and press tab again to navigate between them
+
+-1->nano command is used to edit a file in terminal
+
+0-> man [name of the command you want to get information of]
+
+1-> trash-empty will empty the recycle bin
+
+2->The >> redirection operator will append lines to the end of the specified file, where-as the single greater than > will empty and overwrite the file.
+
+3->echo text > 'Users/Name/Desktop/TheAccount.txt'
+
+4->Cat nameOfFile to view its contents
+
+5->For an empty folder, you can still provide the -r flag, but the dedicated -d flag applies to this case. Without this flag, you will get the same error rm: [folder]: is a directory.
+To delete an empty directory, you can use this command:
+rm -d test
+It is recommended to use the -d flag for empty directory cases instead of the -r flag because the -d flag ensures that a directory is empty.
+If it is not empty, you will get the error rm: test: Directory not empty. So, to be sure you are performing the proper empty directory operation, use the -d flag. 
+
+6->The rmdir command is specifically used to delete empty directories. The syntax is:
+rmdir [folders]
+It is the equivalent of the rm command with the -d flag: rm -d.
+
+7-> Ctrl + Alt + T shortcut key open terminal
+
+8-> We can add create new file if it don't exist previously using the 
+command cat > filename.extension (it will create if it is not already created)
+(if it already exists it will offer you to start writing into it)
+cat >> overwrites contents if already exists, after typing you conten
+go to the next line and press ctrl+c to exit
+Concatenate, or cat, is one of the most frequently used Linux commands. It lists, combines, and writes file content to the standard output. To run the cat command, type cat followed by the file name and its extension. For instance:
+
+cat filename.txt.
+
+Here are other ways to use the cat command:
+
+cat > filename.txt creates a new file.
+cat filename1.txt filename2.txt > filename3.txt merges filename1.txt and filename2.txt and stores the output in filename3.txt.
+tac filename.txt displays content in reverse order.
+
+9-> cp src dest
+
+10-> mv src dest rename or move
+
+11-> sudo apt update
+sudo apt upgrade
+
+12 sudo apt update && sudo apt upgrade
+to update and upgrade together
+
+13-> Difference between relative and absolute path
+I am going to access the Commands.txt file which is located in /home/muhammad/Documents/Commands.txt
+to access this file we can use two ways relative path and absolute path
+Absolute path is quite simple you always need to start from scrath that is /home/muhammad/then the path of your desired item
+in our case it simply /home/muhammad/Documents/Commands.txt
+The relative path is path from where you are currently working for example if I am at the /home/muhammad/Documents
+I just need to write cat Commands.txt only
+
+14-> TO show the files of Recycle Bin use the following command
+ls ~/.local/share/Trash/files/
+~ sign is yet to explore
+
+15-> Grep command is use for search pattern
+grep "apple" example.txt
+it will serch for apple string in example.txt file and return all 
+the lines containing apple
+
+16->xdg-open filename to open a file in preferred app of the system
