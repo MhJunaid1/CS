@@ -1,0 +1,11 @@
+sudo shutdown -h now
+Graceful shutdown
+
+sudo shutdown -P now
+Force shutdown
+
+sudo shutdown -r now
+To suspend
+
+systemctl suspend
+Suspend
