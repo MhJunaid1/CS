@@ -1,0 +1,23 @@
+In object-oriented programming, an abstract class is a class that cannot be instantiated directly and is meant to be subclassed by other classes.
+It provides a set of abstract methods or pure virtual functions that must be implemented by its subclasses.
+An abstract class serves as a blueprint for its subclasses, defining a common interface and behavior that they must adhere to.
+
+An interface, on the other hand, is similar to an abstract class in that it defines a set of methods that must be implemented by a class.
+However, unlike an abstract class, an interface cannot contain any implementation code or member variables.
+It only defines a contract of behavior that must be adhered to by any class that implements it.
+
+The main difference between an abstract class and an interface is that an abstract class can contain both concrete and abstract methods,
+while an interface can only contain abstract methods. An abstract class can also have member variables and constructors, while an interface cannot.
+Additionally, a class can only inherit from one abstract class, but can implement multiple interfaces.
+
+A concrete class is a class that can be instantiated directly and provides implementations for all its methods, including any abstract methods inherited from its
+parent classes or interfaces. A concrete class can also contain its own unique methods and member variables, and
+can be used as a base class for other classes to inherit from.
+
+To summarize, abstract classes and interfaces both provide a way to define a common set of methods that must be implemented by a subclass or implementing class.
+The main difference between them is that abstract classes can contain both concrete and abstract methods, while interfaces can only contain abstract methods.
+A concrete class, on the other hand, is a class that can be instantiated directly and provides implementations for all its methods.
+
+Yes, that's correct. In C++, an abstract class must have at least one pure virtual function or method to be considered abstract. This is because the purpose of an
+abstract class is to define an interface of behavior that must be implemented by its subclasses. A pure virtual function is a function that has no implementation in
+the abstract class and must be implemented by its subclasses.

@@ -1,0 +1,60 @@
+Evaluate Postfix Expression
+Implement a Stack using Linked List
+Reverse a Stack using Recursion
+Implement a Queue using Stacks
+Check for Balanced Parentheses in an Expression
+The celebrity problem
+The stock span problem
+Largest rectangular area in a histogram
+Design a stack that supports getMin() operation in O(1) time complexity.
+Next Greater Element (NGE) problem
+Implement a stack using an array or linked list.
+Check whether parentheses are balanced in a given expression.
+Reverse a string using a stack.
+Evaluate a postfix expression using a stack.
+Convert an infix expression to postfix notation using a stack.
+Implement a queue using two stacks.
+Find the next greater element for each element in an array.
+Find the largest rectangular area in a histogram using a stack.
+Sort a stack using recursion.
+Implement a min stack that supports the min operation in O(1) time.
+Implement a stack that supports push, pop, and min operations in O(1) time.
+Evaluate a prefix expression using a stack.
+Design a data structure that supports getMin, getMax, and getMedian in O(1) time.
+Design a stack that can also return the kth largest element in O(1) time.
+Implement a stack that supports undo and redo operations.
+Implement a stack that can store a maximum of N elements and automatically removes the oldest element when the stack is full.
+Implement a stack that can find the largest element in the stack in O(1) time.
+Implement a stack that can find the smallest element in the stack in O(1) time.
+Implement a stack that can find the second largest element in the stack in O(1) time.
+Implement a stack that can find the second smallest element in the stack in O(1) time.
+Implement a stack using an array or a linked list.
+Check if a given string of parentheses is balanced.
+Evaluate postfix expression using stack.
+Implement a calculator that supports basic arithmetic operations using a stack.
+Reverse a stack.
+Implement a queue using two stacks.
+Implement a function to sort a stack using an additional stack.
+Implement a stack with minimum function that returns the minimum element in constant time.
+Convert infix expression to postfix expression using a stack.
+Implement the Towers of Hanoi problem using a stack.
+Implement a stack using an array and perform basic operations like push, pop, peek, and isEmpty.
+Given a string of parentheses, check if the string is balanced or not using a stack.
+Implement a stack that can return the minimum element in O(1) time.
+Implement a stack that can return the maximum element in O(1) time.
+Given a string of integers and operators, evaluate the expression using a stack.
+Implement a stack that can reverse the order of the elements in O(n) time.
+Implement a stack that can sort its elements in ascending or descending order in O(n^2) time.
+Implement a stack that can perform multiple operations in O(1) time, including push, pop, and get the current minimum or maximum element.
+Implement a stack that can perform undo and redo operations for a text editor.
+Given a maze represented as a 2D array, find a path from the start to the end using a stack.
+Implement a stack using an array or linked list.
+Reverse a string using a stack.
+Evaluate a postfix expression using a stack.
+Implement a queue using two stacks.
+Find the next greater element for each element in an array using a stack.
+Sort a stack using another stack.
+Implement a stack that supports finding the minimum element in constant time.
+Check if a given string of parentheses is balanced or not using a stack.
+Evaluate an infix expression using a stack.
+Implement a stack that supports operations like push, pop, and getMinimum in O(1) time complexity.

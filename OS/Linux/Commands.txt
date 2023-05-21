@@ -1,18 +1,14 @@
--2-> [name of commands you want to use] press tab to see the list of files in the current directory and press tab again to navigate between them
 
--1->nano command is used to edit a file in terminal
+1-> type history to view all the history of the commands typed from terminal
 
-0-> man [name of the command you want to get information of]
+2->press ctrl+D to exit or write exit to exit from terminal
 
-1-> trash-empty will empty the recycle bin
+3-> [name of commands you want to use] press tab to see the list of files in the current directory and press tab again to navigate between them
 
-2->The >> redirection operator will append lines to the end of the specified file, where-as the single greater than > will empty and overwrite the file.
+4-> man [name of the command you want to get information of] e.g man man to see documentation of man
 
-3->echo text > 'Users/Name/Desktop/TheAccount.txt'
-
-4->Cat nameOfFile to view its contents
-
-5->For an empty folder, you can still provide the -r flag, but the dedicated -d flag applies to this case. Without this flag, you will get the same error rm: [folder]: is a directory.
+5->For an empty folder, you can still provide the -r flag, but the dedicated -d flag applies to this case. Without this flag,
+you will get the same error rm: [folder]: is a directory.
 To delete an empty directory, you can use this command:
 rm -d test
 It is recommended to use the -d flag for empty directory cases instead of the -r flag because the -d flag ensures that a directory is empty.
@@ -44,9 +40,9 @@ tac filename.txt displays content in reverse order.
 10-> mv src dest rename or move
 
 11-> sudo apt update
-sudo apt upgrade
+sudo apt upgrade also in a single line you can write sudo apt update && sudo apt upgrade
 
-12 sudo apt update && sudo apt upgrade
+12-> sudo apt update && sudo apt upgrade
 to update and upgrade together
 
 13-> Difference between relative and absolute path
@@ -67,3 +63,20 @@ it will serch for apple string in example.txt file and return all
 the lines containing apple
 
 16->xdg-open filename to open a file in preferred app of the system
+
+17-> cd directory where you want to enter
+if directory name includes space you can write name in two ways
+first write name in quites single or double 'file name' or "file name"
+second way is to use \ e.g cd file\ name
+
+18-> trash-empty will empty the recycle bin
+
+19->The >> redirection operator will append lines to the end of the specified file, where-as the single greater than > will empty and overwrite the file.
+
+20->echo text > 'Users/Name/Desktop/TheAccount.txt'
+
+21->Cat nameOfFile to view its contents
+
+22->nano command is used to edit a file in terminal
+
+23->sudo su: to run every command in super user mode

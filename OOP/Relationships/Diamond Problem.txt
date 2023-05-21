@@ -1,0 +1,73 @@
+The diamond problem is a common issue that can arise in C++ when using multiple inheritance. It occurs when a class inherits from two or more classes that in turn
+inherit from a common base class. This results in the derived class inheriting multiple copies of the common base class, which can lead to ambiguity and conflicts.
+class A {
+public:
+    void foo() { cout << "A::foo()"; }
+};
+
+class B : public A {
+public:
+    void bar() { cout << "B::bar()"; }
+};
+
+class C : public A {
+public:
+    void baz() { cout << "C::baz()"; }
+};
+
+class D : public B, public C {
+public:
+    // ...
+};
+
+In this example, class D inherits from classes B and C, which in turn inherit from class A. When we create an object of class D, 
+it contains two copies of class A, one from B and one from C.
+
+Now, suppose we try to call the foo() function on an object of class D. Which foo() function should be called?
+The one inherited from B::A or the one inherited from C::A? This is the diamond problem.
+
+One solution to this problem is to use virtual inheritance. Virtual inheritance ensures that only one instance of the common base class is inherited by the derived
+class, regardless of how many times it appears in the inheritance hierarchy. To use virtual inheritance, we modify the inheritance of class B and C as follows:
+class A {
+public:
+    void foo() { cout << "A::foo()"; }
+};
+
+class B : virtual public A {
+public:
+    void bar() { cout << "B::bar()"; }
+};
+
+class C : virtual public A {
+public:
+    void baz() { cout << "C::baz()"; }
+};
+
+class D : public B, public C {
+public:
+    // ...
+};
+
+By adding the virtual keyword when inheriting from A, we ensure that D inherits only one instance of class A, which is shared by both B and C.
+This resolves the ambiguity and allows us to call the foo() function on an object of class D.
+D d;
+d.foo(); // Output: A::foo()
+
+
+ANOTHER SOLUTION TO THE DIAMOND PROBLEM
+Another solution to the diamond problem is to use explicit scoping to resolve the ambiguity. We can explicitly specify which version of the inherited function we
+want to call using the scope resolution operator ::.
+
+In the previous example, if we want to call the foo() function inherited from class B, we can do so by using the following syntax:
+D d;
+d.B::foo(); // Output: A::foo()
+
+Similarly, if we want to call the foo() function inherited from class C, we can use the following syntax:
+D d;
+d.C::foo(); // Output: A::foo()
+
+By using explicit scoping, we can resolve the ambiguity and choose which version of the inherited function to call. However, this solution can be cumbersome and
+ error-prone, especially in more complex inheritance hierarchies. Therefore, virtual inheritance is generally considered the preferred solution to the diamond
+  problem.
+ 
+

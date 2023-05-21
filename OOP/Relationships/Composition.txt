@@ -1,0 +1,35 @@
+Composition is another type of relationship between two classes in object-oriented programming. It is a strong relationship where one class owns another class and is responsible for its creation, destruction, and lifetime management. The owned class cannot exist independently of the owning class.
+
+In C++, composition is achieved through the use of member variables that are instances of another class. When the owning class is created, it creates the owned class as a member variable. When the owning class is destroyed, it also destroys the owned class.
+
+class Engine {
+private:
+    int cylinders;
+    float displacement;
+public:
+    Engine(int cyl, float disp) : cylinders(cyl), displacement(disp) {}
+    void start() {
+        cout << "Starting engine with " << cylinders << " cylinders and " << displacement << " liters displacement." << endl;
+    }
+};
+
+class Car {
+private:
+    string make;
+    string model;
+    Engine engine;
+public:
+    Car(string mk, string mdl, int cyl, float disp) : make(mk), model(mdl), engine(cyl, disp) {}
+    void start() {
+        cout << "Starting car: " << make << " " << model << endl;
+        engine.start();
+    }
+};
+
+int main() {
+    Car* myCar = new Car("Ford", "Mustang", 8, 5.0);
+    myCar->start();
+
+    return 0;
+}
+
