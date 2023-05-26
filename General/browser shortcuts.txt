@@ -1,2 +1,6 @@
 1) Typing in Browser URL Search
 When typing in Browser, the autocomplete feature auto completes the whole query, you can press ctrl+enter to search only your typed query
+
+2) In browser, you can use alt+(left,right) to go backward and forward
+
+3) Press Ctrl+Tab to switch between tabs on the browser
