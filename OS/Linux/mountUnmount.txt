@@ -1,0 +1,8 @@
+1) To list the hard drives availabe, type lsblk command, there is also another command sudo fdisk -l to list all hard drives
+
+2) Select the option where you want to mount, by default Kali Linux mount in /media/muhammad , you can create a folder there.
+
+3) Type the command sudo mount /dev/sdbX /repository/subRepository , here sdbX shows which partition you want to mount and
+/repository, the repo where you want to mount, subRepository is where all files of the partiton will be mounted
+
+4) sudo umount /repository/subRepository to unmount the partition you mounted

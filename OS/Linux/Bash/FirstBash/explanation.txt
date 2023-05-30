@@ -1,0 +1,12 @@
+Explanation:
+
+The first line (#!/bin/bash) is the shebang line, which specifies that the script should be interpreted by the Bash shell.
+The script starts by printing the prompt message, "What is your name?", using the echo command.
+The read command is used to read the user's input and store it in the name variable.
+Next, the script uses the echo command again to greet the user by concatenating the value of the name variable with the string "Hello, ".
+The script then uses the date command with the +%Y-%m-%d format to obtain the current date and assigns it to the current_date variable.
+Finally, the script displays the current date by printing the value of the current_date variable.
+To run the script, save it with a .sh file extension (e.g., greeting_script.sh), set execute permissions (chmod +x greeting_script.sh),
+and execute it by running ./greeting_script.sh in the terminal. Use sudo chmod +x greetings_script.sh if does not work without sudo
+
+When the script runs, it will prompt you to enter your name. After entering your name, it will greet you and display the current date.

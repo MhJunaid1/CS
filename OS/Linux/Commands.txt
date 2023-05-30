@@ -80,3 +80,5 @@ second way is to use \ e.g cd file\ name
 22->nano command is used to edit a file in terminal
 
 23->sudo su: to run every command in super user mode
+
+24-> sudo !!	to run the previous command using sudo

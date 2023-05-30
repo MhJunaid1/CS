@@ -1,0 +1,1 @@
+sudo lynis audit system(used to audit Unix-based systems)

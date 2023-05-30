@@ -1,0 +1,1 @@
+Kali Linux uses a GNOME-based desktop environment by default.
