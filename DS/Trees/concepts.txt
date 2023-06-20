@@ -1,0 +1,6 @@
+Binary Trees
+
+Binary Search Trees
+
+AVL Trees
+https://youtu.be/vEZ3-bdPdUQ
