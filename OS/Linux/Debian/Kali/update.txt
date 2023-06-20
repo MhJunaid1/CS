@@ -1,0 +1,12 @@
+When should you update Kali?
+
+If you have a default installation of Kali, you should be checking for updates every few weeks. If you need a new version of a tool, or hear about a security update,
+that may speed up the timetable. However, a good practice is that you ensure all tools work before an engagement and during that engagement you should not update.
+As Kali is a rolling release, once in a while issues will sneak into rolling and may break a tool that is needed.
+
+1-> sudo apt update
+sudo apt upgrade
+also in a single line you can write sudo apt update && sudo apt upgrade
+
+2-> sudo apt update && sudo apt upgrade
+to update and upgrade together
