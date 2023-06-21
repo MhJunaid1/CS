@@ -1,0 +1,9 @@
+Setting an alarm for today:
+echo "DISPLAY=:0 notify-send 'Alarm!' 'Time to wake up!'" | at 08:30
+
+Setting an alarm for tomorrow:
+echo "DISPLAY=:0 notify-send 'Alarm!' 'Time to go to bed!'" | at 22:00 tomorrow
+
+Setting an alarm for a specific date and time:
+echo "DISPLAY=:0 notify-send 'Alarm!' 'Merry Christmas!'" | at 09:30 2023-12-25
+

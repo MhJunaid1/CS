@@ -1,0 +1,19 @@
+The heap data structure is a complete binary tree that satisfies the heap property. In a heap, for every node, the value of the node is either greater than or equal to (in a max heap) or less than or equal to (in a min heap) the values of its children. This property ensures that the maximum (or minimum) element is always at the root of the heap.
+
+Heaps are commonly used to implement priority queues, where elements with higher priority (or lower priority) are accessed or removed first. The heap property allows efficient access and removal of the maximum (or minimum) element in logarithmic time complexity.
+
+There are two main types of heaps:
+
+Max Heap: In a max heap, the value of each parent node is greater than or equal to the values of its children. The maximum element is present at the root node.
+
+Min Heap: In a min heap, the value of each parent node is less than or equal to the values of its children. The minimum element is present at the root node.
+
+Heaps are typically implemented using arrays, where the elements are stored in a level-by-level order. The binary tree structure of the heap can be efficiently represented in an array by considering the indices of the array elements.
+
+The key operations supported by heaps include:
+
+Insertion: Adding a new element to the heap while maintaining the heap property.
+Deletion: Removing the maximum (or minimum) element from the heap while maintaining the heap property.
+Peek: Accessing the maximum (or minimum) element without removing it.
+Heapify: Transforming an array into a heap by rearranging its elements.
+The heap data structure provides efficient operations for managing and accessing elements based on their priority. It is widely used in algorithms and applications that involve prioritization, such as scheduling, graph algorithms, and efficient sorting algorithms like heapsort.

@@ -1,6 +1,22 @@
-Binary Trees
-
-Binary Search Trees
-
 AVL Trees
 https://youtu.be/vEZ3-bdPdUQ
+
+A tree data structure is a hierarchical data structure composed of nodes. Each node contains a value and may have references (links or pointers) to its child nodes. The nodes in a tree are connected by edges, and the topmost node is called the root. Trees are commonly used to represent hierarchical relationships and organize data in a hierarchical manner.
+
+Binary Tree: A binary tree is a type of tree where each node has at most two child nodes, referred to as the left child and the right child. It is a widely used tree structure due to its simplicity and versatility. Binary trees can be used for various applications, such as binary search trees and expression trees.
+
+Binary Search Tree (BST): A binary search tree is a type of binary tree that satisfies the binary search property. In a binary search tree, for every node, all the elements in its left subtree are smaller than the node's value, and all the elements in its right subtree are greater than the node's value. BSTs are commonly used for efficient searching, insertion, and deletion operations.
+
+Complete Binary Tree: A complete binary tree is a binary tree in which all levels, except possibly the last level, are fully filled, and all nodes are as left as possible. In other words, if there are any missing nodes in the last level, they must be on the right side. Complete binary trees are used in scenarios where a balanced tree structure is required, such as binary heaps and priority queues.
+
+Full Binary Tree: A full binary tree is a binary tree in which every node has either zero or two child nodes. In other words, there are no nodes with only one child. Full binary trees are used in certain applications that require a strict binary tree structure, such as Huffman coding and some tree traversal algorithms.
+
+These different types of trees are used to serve various purposes:
+
+Binary search trees provide efficient searching, insertion, and deletion operations, making them suitable for storing and retrieving data in sorted order.
+
+Complete binary trees are used in scenarios where a balanced tree structure is required, ensuring efficient access and storage.
+
+Full binary trees are used in applications that require a strict binary tree structure and can simplify certain algorithms and operations.
+
+Overall, these tree structures offer different properties and characteristics that make them suitable for specific applications and provide efficient solutions to various computational problems.
