@@ -1,0 +1,18 @@
+
+A hash table is a data structure that implements an associative array or dictionary. It uses a hash function to compute an index into an array of buckets or slots, where key-value pairs are stored. The hash function transforms the key into a numeric value that determines the index of the bucket.
+
+A hash function takes an input (the key) and produces a fixed-size string of characters or numeric value (the hash code). The hash code is used as the index to store or retrieve the corresponding value in the hash table. An ideal hash function should produce a unique hash code for each unique input, but collisions can occur when two different keys produce the same hash code.
+
+Collision occurs when two or more keys map to the same index in the hash table. There are various collision resolution techniques to handle collisions:
+
+Open Addressing (Probing):
+
+Linear Probing: If a collision occurs, the next available bucket is searched sequentially until an empty bucket is found.
+Quadratic Probing: If a collision occurs, the interval between successive probes is increased by a quadratic function until an empty bucket is found.
+Double Hashing: If a collision occurs, a second hash function is applied to the key to calculate a new index, and the search continues using the new index.
+Chaining: Each bucket in the hash table contains a linked list. If a collision occurs, the new key-value pair is added to the linked list at that bucket. This allows multiple items with the same hash code to be stored in the same bucket.
+
+Double hashing is a variation of open addressing where a second hash function is used to calculate the probe interval, providing a different sequence of probe positions for different keys.
+
+The choice of collision resolution technique depends on the requirements of the specific application. Linear probing and quadratic probing are commonly used for open addressing, while chaining is often used when the number of collisions is expected to be high.
+
