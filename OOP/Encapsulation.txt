@@ -1,3 +1,6 @@
+In summary, encapsulation is a broader concept that involves bundling data and methods together into a class,
+while data hiding is a specific aspect of encapsulation that focuses on restricting direct access to internal data.
+Encapsulation provides the means to achieve data hiding and other benefits such as abstraction and modularity in object-oriented programming.
 class BankAccount {
 private:
     string accountNumber;
