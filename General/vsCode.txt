@@ -1,0 +1,11 @@
+1) Multiple cursor
+To start typing on multiple lines, just place your cursor and press alt+enter
+
+2) div
+To write 5 divs with className juni div.juni*5
+In the same way div#juni*5 for 5 ids
+
+code . is used in windows to open visual studio code in the current folder, while code-oss . is used in Linux to open the 
+current folder in visual studio code. The imp point is . is used to select the current folder like when we want to open
+a file in the current folder, we use ./, here / the starting point usually it is root, but when we specify . before it
+it means start from the current folder structure.

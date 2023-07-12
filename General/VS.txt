@@ -1,6 +1,0 @@
-1) Multiple cursor
-To start typing on multiple lines, just place your cursor and press alt+enter
-
-2) div
-To write 5 divs with className juni div.juni*5
-In the same way div#juni*5 for 5 ids

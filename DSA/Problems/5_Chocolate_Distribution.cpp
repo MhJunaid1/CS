@@ -24,7 +24,7 @@ The main challenge in this problem is to come up with an efficient algorithm to 
 I hope this clarifies the problem statement for you. If you have any further questions, please let me know.
 
 Naive Approach for Chocolate Distribution Problem
-The idea is to generate all subsets of size m of arr[0..n-1]. For every subset, find the difference between the maximum and minimum elements in it. Finally, return the minimum difference.
+The idea is to generate all subsets of size **m** of arr[0..n-1]. For every subset, find the difference between the maximum and minimum elements in it. Finally, return the minimum difference.
 
 Efficient Approach for Chocolate Distribution Problem
 The idea is based on the observation that to minimize the difference, we must choose consecutive elements from a sorted packet. We first sort the array arr[0..n-1], then find the subarray of size m with the minimum difference between the last and first elements.
