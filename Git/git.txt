@@ -1,5 +1,9 @@
 Git bash is used same as Linux/Unix terminal
-commands like touch, mkdir, rm, rmdir, cat etc
+commands like touch, mkdir, rm, rmdir, cat etc on Windows/MaxOS
+
+When you initilize a empty git repository, it's branch is not allocated unless you made a first commit
+default name of repo made by git init is master and branch name at github is main, so change 
+local name to main from master
 
 git config --global user.name "your_username"
 git config --global user.email "your_email"
