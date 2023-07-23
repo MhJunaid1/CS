@@ -1,0 +1,10 @@
+Radix Sort is a non-comparative sorting algorithm that sorts integers by processing individual digits.
+It processes the numbers from the least significant digit to the most significant digit, using counting sort as a subroutine for each digit.
+Radix Sort is a stable sorting algorithm and is often used to sort integers with a fixed number of digits.
+
+
+The time complexity of Radix Sort is O(d * (n + k)), where "d" is the number of digits in the maximum element, "n" is the number of elements in the array, and "k" is the range of the input (maximum element). It's important to note that if "d" is a constant or a small value compared to "n," the time complexity becomes linear, O(n). However, if "d" is not a constant and grows with the size of the input, the time complexity can be considered as O(n log n).
+
+The space complexity of Radix Sort is O(n + k), where "n" is the number of elements in the input array, and "k" is the range of the input (maximum element). The space complexity mainly comes from the auxiliary arrays used during the counting sort step.
+
+Radix Sort is used to sort integers with a fixed number of digits, especially when the range of input values is known and limited. It is commonly used in scenarios where the input size is large, and the numbers have a limited range, making it efficient compared to comparison-based sorting algorithms like Quick Sort or Merge Sort. Radix Sort is particularly useful when dealing with non-comparable data, such as strings or large integers, where the conventional comparison-based algorithms become less efficient.

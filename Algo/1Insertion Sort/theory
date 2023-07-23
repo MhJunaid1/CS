@@ -1,0 +1,14 @@
+ CONCEPT
+Insert an element from the unsorted array to its correct position in the
+sorted array
+
+ Complexity Analysis
+
+ TIME COMPLEXITY
+The time complexity of the Insertion Sort algorithm is O(n^2) in the average and worst cases, and O(n) in the best case.
+it's important to note that while Insertion Sort has a quadratic time complexity, it can be efficient for small input sizes or PARTIALLY SORTED ARRAYS.
+For larger input sizes or when sorting performance is critical, more efficient sorting algorithms like QuickSort or MergeSort are typically used.
+
+ SPACE COMPLEXITY
+The space complexity of the Insertion Sort algorithm is O(1) since it sorts the array in-place, without requiring
+additional memory that grows with the input size. In other words, the algorithm uses a constant amount of extra memory,
