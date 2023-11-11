@@ -71,6 +71,30 @@ TO locate the content of the public key
 Now enter this public key in your github new ssh key field
 and start pushing code on github
 
+To add multiple ssh keys:
+https://connkat.medium.com/setting-up-multiple-ssh-keys-on-one-computer-75f068d972d9
+1->ssh-keygen -t rsa -C "youremail@mail.com"
+2->It will prompt you for a file name, you should name it something like: id_rsa_personal
+3->Create a config file
+Still in the same terminal, try using ls to see if a file name config exists. If it does, use code config to open it up in your code editor. If it doesn’t exist, you can create it by using touch config, then open it with code config. Copy and paste the following in your config:
+
+# Work account
+Host bitbucket.org
+HostName bitbucket.org
+IdentityFile ~/.ssh/id_rsa_work
+User git
+IdentitiesOnly yes
+# Personal account
+Host github.com
+HostName github.com
+IdentityFile ~/.ssh/id_rsa_personal
+User git
+IdentitiesOnly yes
+
+
+4->Add keys to your accounts
+
+
 Don't create .gitignore file as it don't allow the options(not 100% true)
 just a observation
 Prefer ssh over http for pushing code on github
