@@ -1,227 +1,143 @@
-//Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23506 for x64
-
 #include <iostream>
-#include <string>
-#include <vector>
-#include <cstdlib>
-#include <list>
-#include <stack>
-#include <cmath>
-#include <algorithm>
-using namespace std;
 
 template <typename T>
-class stack{//class template for circular stack
+class stack {
 private:
-	T * arr;//pointer to be allocated
-	int cap;//physical size
-	int size;//logical size
-	int top;
-	
-	int next(int i){//utility function
-		return (i+1)%cap;//cap
-	} 
+    T *arr;  // Pointer to be allocated
+    int cap; // Physical size
+    int size; // Logical size
+    int top;
 
 public:
-	//next time
-	
-	queue(int icap=0){
-		if(icap>0){
-			arr=new T[icap];
-			cap=icap;
-		}else{//default behaviour
-			arr=nullptr;
-			cap=0;
-		}
-		size=0;
-		top=-1;
-	}
+    stack(int icap = 0) {
+        if (icap > 0) {
+            arr = new T[icap];
+            cap = icap;
+        } else { // Default behaviour
+            arr = nullptr;
+            cap = 0;
+        }
+        size = 0;
+        top = -1;
+    }
 
-	void push(const T& obj){
-		//is the queue full (physically)
-		if(size+1==cap){
-			//array is full, so grow it
-			T * temp = new T[cap*2];
-			//copy data from the older array
-			int k=0, i=next(front);
-			while(k<size){
-				temp[k+1]=arr[i];
-				i=next(i);
-				k++;
-			}
-			//how to change front and rear values?
-			front=0;//dead cell
-			rear=size;//rear is pointing at the last element
-			rear++;
-			temp[rear]=obj;
-			cap*=2;
-			size++;
-			delete [] arr;
-			arr=temp;
-		}else if(cap==0){
-			//what should we do?
-			arr=new T[2];
-			front=0;
-			rear=1;
-			arr[1]=obj;
-			size=1;
-			cap=2;
-		}
-		else{
-			//there is a slot available
-			rear=next(rear);
-			arr[rear]=obj;
-			size++;
-		}
-	}
+    void push(const T &obj) {
+        // Is the stack full (physically)
+        if (size >= cap) {
+            // Array is full, so grow it
+            T *temp = new T[cap * 2];
+            // Copy data from the older array
+            for (int i = 0; i < size; ++i) {
+                temp[i] = arr[i];
+            }
+            top = size;
+            temp[++top] = obj;
+            cap *= 2;
+            size++;
+            delete[] arr;
+            arr = temp;
+        } else if (cap == 0) {
+            // What should we do?
+            arr = new T[2];
+            top = 0;
+            arr[0] = obj;
+            size = 1;
+            cap = 2;
+        } else {
+            // There is a slot available
+            arr[++top] = obj;
+            size++;
+        }
+    }
 
-	void dequeue(){
-		if(empty())
-			return;
-		
-		if((size+1)==cap/2)
-		{
-			 //array is half empty, so shrink it
-			T * temp = new T[cap/2];
-			//copy data from the older array
-			int k=0, i=next(front);
-			while(k<size){
-				temp[k+1]=arr[i];
-				i=next(i);
-				k++;
-			}
-			//how to change front and rear values?
-			front=0;//dead cell
-			rear=size;
-			
-			cap/=2;
-			front=next(front);
-			size--;
-			delete [] arr;
-			arr=temp;
-		}else{
-			front=next(front);
-			size--;
-		}
-	}
+    void pop() {
+        if (empty())
+            return;
 
+        if ((size) == cap / 2) {
+            // Array is half empty, so shrink it
+            T *temp = new T[cap / 2];
+            // Copy data from the older array
+            for (int i = 0; i < size; ++i) {
+                temp[i] = arr[i];
+            }
+            top = size;
 
-	void printQueue(){
-		//testing purposes
-		for(int i=front+1;i<=rear;i++){
-			cout<<arr[i]<<" ";
-		}
-	}
-	
-	const T & peek(){//read only reference
-		return arr[next(front)];
-	}
+            cap /= 2;
+            top--;
+            size--;
+            delete[] arr;
+            arr = temp;
+        } else {
+            top--;
+            size--;
+        }
+    }
 
+    void printStack() {
+        // Testing purposes
+        for (int i = 0; i < size; ++i) {
+            std::cout << arr[i] << " ";
+        }
+    }
 
-	bool empty(){
-		return size==0;
-	}
+    const T &peek() { // Read only reference
+        return arr[top];
+    }
 
-	int getSize(){
-		return size;
-	}
-	//destructor
-	~queue(){
-		delete [] arr;
-	}
+    bool empty() {
+        return size == 0;
+    }
 
-	//add the follwing methods
-	//Copy Constructor
-	
-	queue(const queue & obj){
-		if(this==&obj){
-			return;
-		}
-		cap=obj.cap;
-		arr=new T[cap];
-		front=obj.front;
-		rear=obj.rear;
-		size=obj.size;
-		int i=next(front);
-		while(i<=rear){
-			arr[i]=obj.arr[i];
-			i=next(i);
-		}
-		
-		return *this;
-	}
-	//Assignment operator
-	
-	void operator=(const queue& obj) 
-    { 
-        if(this==&obj){
-			return;
-		} 
-		cap=obj.cap;
-		arr=new T[cap];
-		front=obj.front;
-		rear=obj.rear;
-		size=obj.size;
-		int i=next(front);
-		while(i<=rear){
-			arr[i]=obj.arr[i];
-			i=next(i);
-		}
-		return *this;
-    } 
+    int getSize() {
+        return size;
+    }
 
+    // Destructor
+    ~stack() {
+        delete[] arr;
+    }
+
+    // Copy constructor
+    stack(const stack &obj) {
+        if (this == &obj) {
+            return;
+        }
+        cap = obj.cap;
+        arr = new T[cap];
+        top = obj.top;
+        size = obj.size;
+        for (int i = 0; i < size; ++i) {
+            arr[i] = obj.arr[i];
+        }
+    }
+
+    // Assignment operator
+    void operator=(const stack &obj) {
+        if (this == &obj) {
+            return;
+        }
+        cap = obj.cap;
+        delete[] arr;
+        arr = new T[cap];
+        top = obj.top;
+        size = obj.size;
+        for (int i = 0; i < size; ++i) {
+            arr[i] = obj.arr[i];
+        }
+    }
 };
 
-int main(){
-	queue<int> q1(2);//make a queue with cap=250
-	q1.enqueue(22);
-	q1.enqueue(33);
-	q1.enqueue(44);
-	q1.enqueue(55);
-	q1.enqueue(66);
-	
-	queue<int> q2;
-	q2=q1;
-	q2.printQueue();
-	
+int main() {
+    stack<int> stk1(2); // Make a stack with cap=2
+    stk1.push(22);
+    stk1.push(33);
+    stk1.push(44);
+    stk1.push(55);
+    stk1.push(66);
+
+    stack<int> stk2;
+    stk2 = stk1;
+    stk2.printStack();
 }
-
-
-//q1.printQueue();
-	// while(!q1.empty()){
-	// 	int value = q1.peek();
-	// 	cout<<value<<endl;
-		
-	// 	q1.dequeue();
-	// }
-
-
-
-
-
-
-// stack<int> s;
-
-	// int x=0;
-	// x=3;
-	// x++;
-
-	// while(x<10){
-	// 	x++;
-	// }
-
-
-	//ADT: Abstract Data Type
-	
-	
-	//size is the number of elements enqueued
-
-
-
-
-
-
-
-
-
 
