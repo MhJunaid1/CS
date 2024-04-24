@@ -10,7 +10,7 @@ git config --global user.email "your_email"
 TO set username and password on git
 
 git config --global --list
-TO check if changed has been committed
+TO check if changes has been committed
 
 git init 
 To initialize a empty git repo
@@ -56,6 +56,10 @@ git branch -m (chaged name from current to new one) // can be -m or -M
 git checkout (name of the branch you want to work):
 git merge (name of the branch you want to merge to main)
 
+To delete a git from your local repository:
+rm -rf .git :it will delete all the configurations related to git
+You can also delete .git manually by showing the hidden files because
+.git is hidden by default
 
 To push code from local machine using git
 we need to add ssh key in github account
