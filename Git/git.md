@@ -43,7 +43,9 @@ Check if changes have been committed.
 - `git checkout filename.extension`: Get the version of a file from the last commit.
 - `git checkout -f`: Checkout all files from the previous commit.
 - `git log`: View all commits in the Git repo.
+- `git log --oneline`: View commits in one line that is hash and the commit description.
 - `git log -p -<number>`: View a specific number of recent commits (press `q` to quit).
+- `git checkout <commit-hash>`: Open a files till a specific commit.
 
 ## Diff and Ignore
 

@@ -1,4 +1,4 @@
-ata binding is a technique used in software development to establish a connection
+Data binding is a technique used in software development to establish a connection
 between the user interface (UI) elements of an application and the underlying data or business logic.
 It allows for automatic synchronization and propagation of data changes between the UI and the data source without the need for manual intervention.
 
