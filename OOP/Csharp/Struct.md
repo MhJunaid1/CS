@@ -46,3 +46,31 @@ In this example:
 - The `ToString` method is overridden to provide a string representation of the `Point`.
 
 Structs are best used for simple data structures that are immutable and do not require the overhead of object-oriented features like inheritance.
+
+Check the below example to understand the difference more
+
+```csharp
+struct Point
+{
+    public int x, y;
+
+    public Point(int x, int y) 
+    {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+class A
+{
+    static void Main()
+    {
+        Point a = new Point(10, 10);
+        Point b = a;
+        a.x = 100;
+        Console.WriteLine(b.x);
+    }
+}
+```
+
+the output is `10`. The assignment of `a` to `b` creates a copy of the value, and `b` is thus unaffected by the assignment to `a.x`. Had Point instead been declared as a class, the output would be `100` because `a` and `b` would reference the same object.
