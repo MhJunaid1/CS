@@ -10,3 +10,33 @@ In summary:
 - **Features** are the inputs to the model.
 - **Labels** are the outputs the model aims to predict.
 
+You can get data from:
+- From your company
+- From an investor willing to trust you on his data
+- From online data scraping
+- From UCI ML repository!
+- From huggingface, kaggle etc
+
+Follow Big Data tutorials of codewithHarry for understanding it more.
+
+Supervised And Unsupervised Learning!
+
+Supervised (Classification and Regression)
+Classification (Classify which label a given set of features belong to!)
+Regression (Find out the value of the label using previous data!)
+
+Unsupervised (Clustering and Association)
+Clustering (Discover the inherent groupings in the data, such as grouping customers by purchasing behavior)
+Association (Association rule learning problem. Such as people that buy X also tend to buy Y)
+
+Python Scikit learn(simple and efficient tools for data mining and data analysis) For ML
+
+Simple Linear Regression
+Simple linear regression is a statistical method used to model the relationship between two variables by fitting a linear equation to observed data. It is called "simple" because it involves only one independent (predictor) variable and one dependent (response) variable.
+
+### Components:
+- **Independent Variable (X)**: This is the predictor or explanatory variable. It is the variable used to predict the value of the dependent variable.
+- **Dependent Variable (Y)**: This is the outcome or response variable. It is the variable that you are trying to predict.
+
+
+Simple linear regression is widely used in predictive modeling and is the foundation for more complex regression techniques.
