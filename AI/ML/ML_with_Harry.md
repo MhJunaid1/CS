@@ -10,33 +10,79 @@ In summary:
 - **Features** are the inputs to the model.
 - **Labels** are the outputs the model aims to predict.
 
-You can get data from:
-- From your company
-- From an investor willing to trust you on his data
-- From online data scraping
-- From UCI ML repository!
-- From huggingface, kaggle etc
 
-Follow Big Data tutorials of codewithHarry for understanding it more.
+Linear Regression using Python
 
-Supervised And Unsupervised Learning!
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import datasets, linear_model
+from sklearn.metrics import  mean_squared_error
 
-Supervised (Classification and Regression)
-Classification (Classify which label a given set of features belong to!)
-Regression (Find out the value of the label using previous data!)
+diabetes = datasets.load_diabetes()
 
-Unsupervised (Clustering and Association)
-Clustering (Discover the inherent groupings in the data, such as grouping customers by purchasing behavior)
-Association (Association rule learning problem. Such as people that buy X also tend to buy Y)
+diabetes_X = diabetes.data
 
-Python Scikit learn(simple and efficient tools for data mining and data analysis) For ML
+diabetes_X_train = diabetes_X[:-30]
+diabetes_X_test = diabetes_X[-30:]
 
-Simple Linear Regression
-Simple linear regression is a statistical method used to model the relationship between two variables by fitting a linear equation to observed data. It is called "simple" because it involves only one independent (predictor) variable and one dependent (response) variable.
+diabetes_y_train = diabetes.target[:-30]
+diabetes_y_test = diabetes.target[-30:]
 
-### Components:
-- **Independent Variable (X)**: This is the predictor or explanatory variable. It is the variable used to predict the value of the dependent variable.
-- **Dependent Variable (Y)**: This is the outcome or response variable. It is the variable that you are trying to predict.
+model = linear_model.LinearRegression()
+
+model.fit(diabetes_X_train, diabetes_y_train)
+
+diabetes_y_predicted = model.predict(diabetes_X_test)
+
+print("Mean squared error is: ", mean_squared_error(diabetes_y_test, diabetes_y_predicted))
+
+print("Weights: ", model.coef_)
+print("Intercept: ", model.intercept_)
+
+# plt.scatter(diabetes_X_test, diabetes_y_test)
+# plt.plot(diabetes_X_test, diabetes_y_predicted)
+#
+# plt.show()
+
+# Mean squared error is:  3035.0601152912695
+# Weights:  [941.43097333]
+# Intercept:  153.39713623331698
 
 
-Simple linear regression is widely used in predictive modeling and is the foundation for more complex regression techniques.
+
+Multiple Regression Model
+Loss Function and Gradient Descent
+Mini Batch and Stockchastic Gradient Descent
+
+
+Supervised Learning
+Classification
+Knearest Neighbor Classification
+
+# Loading required modules
+from sklearn import datasets
+from sklearn.neighbors import KNeighborsClassifier
+
+# Loading Dataset
+iris  = datasets.load_iris()
+
+# Printing features and labels
+features = iris.data
+labels = iris.target
+# print(iris.DESCR)
+
+# print(features[0],labels[0])
+
+# Training the classifier
+
+clf = KNeighborsClassifier()
+clf.fit(features, labels)
+
+preds = clf.predict([[9.1, 9.5, 6.4, 0.2]])
+print(preds)
+
+
+OverFitting And UnderFitting In Models
+Techniques to avoid OverFitting
+Resamping
+Holding a validation dataset
