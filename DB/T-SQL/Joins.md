@@ -1,0 +1,1 @@
+INNER JOIN returns only the records that have matching values in both tables. LEFT JOIN returns all records from the left table and matching records from the right table, with NULL for non-matching rows. RIGHT JOIN does the opposite, returning all records from the right table and matching rows from the left.
