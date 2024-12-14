@@ -65,6 +65,10 @@ If there are conflicting changes between the branches, Git will pause the merge 
    git commit
    ```
 
+5. If you encounter conflicts during a merge and decide not to resolve them, you can run:
+   ```bash
+   git merge --abort
+  
 ---
 
 ### **Fast-Forward vs Three-Way Merge**
