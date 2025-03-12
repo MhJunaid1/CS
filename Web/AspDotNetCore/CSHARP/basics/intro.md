@@ -40,9 +40,6 @@ the proper conventions when declaring a  real number variables, compiler will co
 in the below example:
 ![alt text](image-2.png)
 
-Non Primitive Data Types
-![alt text](image-3.png)
-
 **Overflowing**
 If we go beyond the limit of a real number data type, compiler will assign zero to it.
 ![alt text](image-5.png)
@@ -63,7 +60,36 @@ You need to tell the compiler explicitly that you are aware of data loss, but yo
 ![alt text](image-12.png)
 ![alt text](image-13.png)
 
+String, Int32 they are imported from dotnet library, while int, string are not, but they are the
+same thing
+![alt text](image-16.png)
 
+**Non-primitive Data Types**
+Non Primitive Data Types
+![alt text](image-3.png)
+
+**Static Methods**
+Static methods are created per class rather than the per instance of the class in memory
+![alt text](image-14.png)
+
+**Strings**
+Strings are immutable:
+![alt text](image-15.png)
+
+**Enums**
+![alt text](image-17.png)
+![alt text](image-18.png)
+
+**Value Types and Reference Types**
+![s](image-19.png)
+![alt text](image-20.png)
+
+Below ss hightlight how memoery is managed on stack:
+![alt text](image-21.png)
+![alt text](image-22.png)
+and the below ss shows how memory is managed on heap of reference types:
+![alt text](image-23.png)
+![alt text](image-24.png)
 
 
 **Latest Dotnet**
