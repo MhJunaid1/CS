@@ -91,7 +91,38 @@ and the below ss shows how memory is managed on heap of reference types:
 ![alt text](image-23.png)
 ![alt text](image-24.png)
 
+**Foreach Loop**
+![alt text](image-25.png)
+
+**Random Class**
+![alt text](<Screenshot (72).png>)
 
 **Latest Dotnet**
 The latest version of the .NET Runtime enables you to instantiate an object without having to repeat the type name (target-typed constructor invocation). For example, the following code will create a new instance of the Random class:
 Random dice = new();
+
+**Multi Dimmensional Arrays**
+![alt text](image-27.png)
+Below is the code snippet of how we use multi dimmensional arrays in C#
+![alt text](image-28.png)
+
+**Jaggad Arrays**
+![alt text](image-30.png)
+
+Below ss highlights the difference between the jaggad arrays and the multi dimmensional arrays:
+![alt text](image-31.png)
+
+**Lists in C#**
+![alt text](image-32.png)
+![alt text](image-33.png)
+![alt text](image-34.png)
+
+Lists in action:
+![alt text](image-35.png)
+
+**Working with DateTime**
+![alt text](image-36.png)
+![alt text](image-37.png)
+TimeSpan
+![alt text](image-38.png)
+![alt text](image-39.png)
