@@ -126,3 +126,40 @@ Lists in action:
 TimeSpan
 ![alt text](image-38.png)
 ![alt text](image-39.png)
+
+**Strings**
+![alt text](image-40.png)
+![alt text](image-41.png)
+![alt text](image-42.png)
+![alt text](image-43.png)
+![alt text](image-44.png)
+ToString takes formatters as parameters
+![alt text](image-45.png)
+![alt text](image-46.png)
+![alt text](image-47.png)
+
+StringBuilder
+![alt text](image-48.png)
+![alt text](image-49.png)
+![alt text](image-50.png)
+![alt text](image-51.png)
+![alt text](image-52.png)
+
+**Working with files**
+
+![alt text](image-53.png)
+![alt text](image-54.png)
+![alt text](image-55.png)
+![alt text](image-56.png)
+![alt text](image-57.png)
+![alt text](image-58.png)
+![alt text](image-60.png)
+File provides static whereas Fileinfo is instantiated:
+![alt text](image-61.png)
+
+Directory
+![alt text](image-62.png)
+![alt text](image-63.png)
+
+Working with path:
+![alt text](image-64.png)
