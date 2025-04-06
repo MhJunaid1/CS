@@ -73,4 +73,73 @@
 ![alt text](image.png)
 ![alt text](image-1.png)
 ![alt text](image-2.png)
+This image represents the architecture of **.NET MAUI (Multi-platform App UI)**, Microsoft's modern cross-platform framework that replaces Xamarin.Forms. It shows how **.NET MAUI enables a single codebase** to run on multiple platforms.
+
+### **Breakdown of the Image:**
+1. **Your App Code (Top Gray Block)**
+   - This is your application's shared code, including UI, business logic, and platform-independent logic.
+   - You write this code **once**, and it runs on different platforms.
+
+2. **.NET MAUI (Blue Dashed Box)**
+   - Acts as an **abstraction layer**, meaning it provides a common way to interact with different platform-specific components.
+   - It includes **controls and APIs** that work across Android, iOS, macOS, and Windows.
+
+3. **Device Abstraction Layer (Middle Blue Box)**
+   - It **binds your app code to platform-specific components**.
+   - Instead of writing separate code for Android, iOS, macOS, and Windows, **.NET MAUI handles it for you**.
+
+4. **Platform-Specific Implementations**
+   - .NET MAUI uses **.NET for Android, .NET for iOS, .NET for Mac Catalyst, and WinUI 3** to communicate with native APIs of different platforms.
+   - These bindings allow access to native features like the camera, sensors, and notifications.
+
+5. **.NET Runtimes and Libraries (Bottom Blue Box)**
+   - Provides the core functionalities of .NET (memory management, garbage collection, threading, etc.).
+   - Ensures apps run efficiently on **Android, iOS, macOS, and Windows**.
+
+6. **Platform-Specific Execution (Bottom Row)**
+   - The final compiled app runs on its respective OS (Android, iOS, macOS, Windows).
+
+### **Key Takeaways:**
+✅ **Write once, run everywhere** – No need to write platform-specific UI or business logic.  
+✅ **Uses native bindings** – Apps can access platform-specific APIs when needed.  
+✅ **Successor to Xamarin.Forms** – .NET MAUI offers a more unified and improved way to build cross-platform apps.  
+
 ![alt text](image-3.png)
+This image illustrates the **Handler Architecture in .NET MAUI**, specifically for a `Button` control. It explains how **cross-platform UI components** are translated into **native UI elements** on different platforms.
+
+---
+
+### **Breakdown of the Image:**
+#### **1. Cross-Platform Control (Virtual View)**
+- **Button (`Microsoft.Maui.Controls`)** (Purple Box)  
+  - This is the **abstract, cross-platform button** defined in .NET MAUI.  
+  - It is what developers use when writing their UI code.
+
+- **IButton (`Microsoft.Maui`)** (Blue Box)  
+  - This is an **interface** that defines the common behavior for buttons across all platforms.  
+  - It ensures that a button behaves the same way on **iOS, Android, macOS, and Windows**.
+
+---
+
+#### **2. Handlers (Middle Layer)**
+- Handlers **bridge the gap between the cross-platform control and the native view**.
+- Each platform has its own **ButtonHandler**:
+  - **iOS/macOS → ButtonHandler (`Microsoft.Maui.Handlers`)**
+  - **Android → ButtonHandler (`Microsoft.Maui.Handlers`)**
+  - **Windows → ButtonHandler (`Microsoft.Maui.Handlers`)**
+
+---
+
+#### **3. Native Views (Platform-Specific Implementations)**
+- These are the actual **native buttons** used on each platform:
+  - **iOS/macOS → `UIButton` (UIKit)**
+  - **Android → `AppCompatButton` (AndroidX.AppCompat.Widget)**
+  - **Windows → `Button` (Microsoft.UI.Xaml.Controls)**
+
+---
+
+### **Key Takeaways:**
+✅ **Handlers replace renderers from Xamarin.Forms** – Making UI rendering more lightweight and faster.  
+✅ **Customizable UI** – Developers can override handlers to modify platform-specific behavior.  
+✅ **Efficient Rendering** – Unlike Xamarin.Forms, .NET MAUI **directly maps to native controls**, reducing overhead.  
+
