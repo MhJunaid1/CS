@@ -57,3 +57,4 @@ print(divide(10, 2))  # Output: 5.0
 ✅ **Assertions:** Ensure assumptions about the code are correct during development.  
 🔍 **Logging & Monitoring:** Keep logs of unexpected issues for debugging.  
 
+Too much defensive programming is going to bloat your code with too much validation
