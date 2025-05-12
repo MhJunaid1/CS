@@ -5,9 +5,10 @@
 ![alt text](image-4.png)
 ![alt text](image-5.png)
 ![alt text](image-6.png)
-Generic vs Non-Generic Tasks
-Task is non-generic version while Task<T> is the genric one.
-Below is the example of Syn Programming when the DownloadHtml function is called, UI is blocked and we can't do anything.
+Generic vs Non-Generic Tasks:
+
+Task is non-generic version while `Task<T>` is the genric one.
+Below is the example of Sync Programming when the DownloadHtml function is called, UI is blocked and we can't do anything.
 After the operation is complete, UI will be unlocked and the user can perform the operations correctly.
 
 ![alt text](image-7.png)
