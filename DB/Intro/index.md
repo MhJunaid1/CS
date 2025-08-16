@@ -31,3 +31,6 @@ A child can have multiple parents.
 ![alt text](image-15.png)
 **OLAP**
 ![alt text](image-16.png)
+
+**Comments**
+![alt text](image-17.png)
